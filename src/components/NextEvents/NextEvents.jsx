@@ -1,94 +1,62 @@
-import "./NextEvents.css";
+import { useEffect, useRef } from "react" ;
+// import { useScroll } from "motion";
+import { GUI } from "lil-gui";
+import * as THREE from "three";
 
-function NextEvents() {
-  return (
-    <>
-        <div class="homepage-next-events">
-        <div class="container">
-            <div class="row">
-                <div class="next-events-section-header">
-                    <h2 class="entry-title">Our next events</h2>
-                    <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facilisis et, scelerisque sit amet metus. Duis vel semper turpis, ac tempus libero. Maecenas id ultrices risus. Aenean nec ornare ipsum, lacinia.</p>
-                </div>
-            </div>
+// import texture from "./texture.jpg";
 
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="next-event-wrap">
-                        <figure>
-                            <a href="#"><img src="images/next1.jpg" alt="1" /></a>
+const Scene = () => {
+    const canvasRef = useRef();
+    const debugMode = true;
+    // const { scrollYProgress } = useScroll();
 
-                            <div class="event-rating">8.9</div>
-                        </figure>
+useEffect(() => { 
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
 
-                        <header class="entry-header">
-                            <h3 class="entry-title">U2 Concert in Detroitt</h3>
+    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-                            <div class="posted-date">Saturday <span>Jan 27, 2018</span></div>
-                        </header>
+    const geometry = new THREE.BoxGeometry();
+    // const textureLoader = new THREE.TextureLoader();
+    // const texture = textureLoader.load(texture);
+    // const material = new THREE.MeshBasicMateria1({ map: texture });
 
-                        <div class="entry-content">
-                            <p>Vestibulum eget lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus.</p>
-                        </div>
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
-                        <footer class="entry-footer">
-                            <a href="#">Buy Tikets</a>
-                        </footer>
-                    </div>
-                </div>
+    const animate = () => {
+    requestAnimationFrame(animate);
 
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="next-event-wrap">
-                        <figure>
-                            <a href="#"><img src="images/next1.jpg" alt="1" /></a>
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    // On anime le cube en fonction de la position de défilement de la page
+    // cube.rotation.y = scrollYProgress * Math.PI * 2;
 
-                            <div class="event-rating">7.9</div>
-                        </figure>
+    renderer.render(scene, camera);
+    };
 
-                        <header class="entry-header">
-                            <h3 class="entry-title">TED Talk California</h3>
+    animate();
 
-                            <div class="posted-date">Saturday <span>Jan 27, 2018</span></div>
-                        </header>
+if (debugMode) {
+    const gui = new GUI(scene, camera, renderer);
+    gui.add(cube.rotation, "x").min(-Math.PI).max(Math.PI).step(0.01).name("Rotation X");
+    gui.add(material, "wireframe");
+    }
+}, []);
 
-                        <div class="entry-content">
-                            <p>Eget lacus at mauris sagittis varius. Etiam ut ven enatis dui. Nullam tellus risus, pellentesque.</p>
-                        </div>
+    return <canvas ref={canvasRef} />;
+};
 
-                        <footer class="entry-footer">
-                            <a href="#">Buy Tikets</a>
-                        </footer>
-                    </div>
-                </div>
+export default Scene;
+// const AnimatedCube = () => {
+//     return (
+//         <motion.div style={{ height:"200vh" }}>
+//             <Scene />
+//         </motion.div>
+//     );
+// };
 
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="next-event-wrap">
-                        <figure>
-                            <a href="#"><img src="images/next1.jpg" alt="1" /></a>
-
-                            <div class="event-rating">9.9</div>
-                        </figure>
-
-                        <header class="entry-header">
-                            <h3 class="entry-title">Ultra Music Miami</h3>
-
-                            <div class="posted-date">Saturday <span>Jan 27, 2018</span></div>
-                        </header>
-
-                        <div class="entry-content">
-                            <p>Lacus at mauris sagittis varius. Etiam ut venenatis dui. Nullam tellus risus, pellentesque at facili.</p>
-                        </div>
-
-                        <footer class="entry-footer">
-                            <a href="#">Buy Tikets</a>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </>
-  );
-}
-
-export default NextEvents;
+// export default AnimatedCube;
