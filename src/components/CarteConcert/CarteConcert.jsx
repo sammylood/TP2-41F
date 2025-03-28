@@ -1,11 +1,22 @@
 
+import { useNavigate } from "react-router-dom";
+import 'animate.css';
+
 function CarteConcert(props) {
-    const {concert} = props;
+    const { concert } = props;
+    const navigate = useNavigate();
+
+    //  TO DO :  Corriger le bug : Concert.id n'apparait pas
+
+    function onClicCarte(event){
+        navigate(`/concert/${concert.id}`);
+    }
+
   return (
-    <div className="col-12 col-sm-6 col-md-4"> 
+    <div className="col-12 col-sm-6 col-md-4 animate__animated animate__fadeIn" onClick={onClicCarte}> 
                       <div className="next-event-wrap">
                           <figure>
-                              <a href="#"><img src={`img/${concert.poster}`} alt={concert.titre} /></a>
+                             <img src={`img/${concert.poster}`} alt={concert.titre} />
 
                               {/* <div className="event-rating">7.9</div> */}
                           </figure>
@@ -17,11 +28,11 @@ function CarteConcert(props) {
                           </header>
 
                           <div className="entry-content">
-                              <p>{concert.artist} {concert.lieu} </p>
+                              <p>{concert.artist} {concert.lieu} {concert.id}</p>
                           </div>
 
                           <footer className="entry-footer">
-                              <a href="#">En savoir plus</a>
+                              <p>En savoir plus</p>
                           </footer>
                         </div>  
                       </div>

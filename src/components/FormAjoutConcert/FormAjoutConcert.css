@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 50px; 
+    & .input-group {
+        display: flex;
+        gap: 0.5rem;
+    }
+    input,
+    textarea,
+    select {
+        border: 2px solid #333;
+        border-radius: 10px;
+    }
+    input[type="submit"] {
+        padding: 0.25rem 1rem;
+        margin-bottom: 50px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:disabled {
+            background-color: color-mix(in oklab, #ebebeb 80%, black 20%);
+            color: #222222;
+            pointer-events: none;
+            border: none;
+        }
+    }
+}

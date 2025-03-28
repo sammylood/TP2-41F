@@ -1,14 +1,31 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-function Concert() {
+function DetailConcert() {
     const  { id } = useParams();
-    const [concert, setConcert] = useState({ titre: "", genre: "" });
+
+    let [concert, setConcert] = useState({ 
+        id: "",
+        type: "", 
+        titre: "",
+        genre: "",
+        poster: "",
+        uri: "",
+        artiste: [""],
+        date: "",
+        ville: "",
+        lieu: "",
+        prix: "", 
+    });
   
     useEffect(() => {
-        fetch(`https://tp1-41f.onrender.com/concert/${id}`)
-        .then((response) => response.json())
-        .then((data) => setConcert(data));
+        async function fetchData(){
+       const reponse = await fetch(`https://tp1-41f.onrender.com/concerts/${id}`);
+       const donneesConcert = await reponse.json();
+       setConcert(donneesConcert);
+    }
+    
+    fetchData();
     }, [id]);
   
   return (
@@ -19,4 +36,4 @@ function Concert() {
   );
 }
 
-export default Concert
+export default DetailConcert
