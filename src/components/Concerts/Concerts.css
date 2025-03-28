@@ -1,0 +1,15 @@
+.homepage-next-events .next-event-wrap figure img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+/*------------ CarteConcert . css ------------*/
+.next-event-wrap .card-event{
+padding: 0 15px
+}
+.card-event .entry-title{
+    min-height: 3lh;
+}

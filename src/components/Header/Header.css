@@ -1,0 +1,6 @@
+.site-header{
+    background-color: blueviolet;
+    a.active{
+        color:#cfc9d4
+    }
+}
