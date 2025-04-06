@@ -7,7 +7,7 @@ function Concerts() {
 
   useEffect(()=>{
     async function fetchData(){
-        const reponse = await fetch("https://tp1-41f.onrender.com/concerts");
+        const reponse = await fetch("https://tp1-41f.onrender.com/liste-concerts");
         const listeConcerts = await reponse.json();
         setConcerts(listeConcerts);
     }
@@ -29,6 +29,7 @@ function Concerts() {
 
             <div class="row">
                {concerts.map((concert) => {
+                    console.log(concert);
                     return <CarteConcert key={concert.id}  concert={concert}/>;
                 })}
             </div>

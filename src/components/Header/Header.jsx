@@ -29,7 +29,7 @@ function Header() {
                             <ul>
                                 <li><NavLink to ={"/"}>Home</NavLink></li>
                                 <li><NavLink to ={"/"}>About us</NavLink></li>
-                                <li><NavLink to ={"/concerts"}>Concerts</NavLink></li>
+                                <li><NavLink to ={"/liste-concerts"}>Concerts</NavLink></li>
                                 <li><NavLink to ={"/"}>News</NavLink></li>
                                 <li><NavLink to ={"/"}>Contact</NavLink></li>
                             </ul>
