@@ -4,3 +4,13 @@
         color:#cfc9d4
     }
 }
+
+.input-entry{
+    display: flex;
+    background-color: #ED80FF;
+    padding:5px 10px;
+    min-height: 40px;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
