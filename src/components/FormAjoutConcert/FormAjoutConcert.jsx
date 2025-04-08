@@ -1,9 +1,12 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import "./FormAjoutConcert.css";
 import { isLength, isInt, isDate, trim, escape, isEmpty, isIn } from "validator";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../AuthContext/AuthContextProvider";
+
 
 function FormAjoutConcert() {
+    const {jeton} = useContext(AuthContext);
     const formRef = useRef();
     const navigate = useNavigate();
 
@@ -62,6 +65,7 @@ function FormAjoutConcert() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    authorization: `Bearer ${jeton}`,
                 },
                 body: JSON.stringify(donneesConcert),
             };

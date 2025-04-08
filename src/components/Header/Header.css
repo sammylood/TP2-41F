@@ -14,3 +14,10 @@
     flex-wrap: wrap;
     
 }
+
+@media (min-width: 992px) {
+    .d-lg-block {
+        display: flex !important;
+        justify-content: flex-end;
+    }
+}

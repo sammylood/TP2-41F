@@ -23,7 +23,7 @@ function AuthContextProvider(props) { //Provider de context
             const {Nom, courriel, adminStatut} = jwtDecode(jeton);
             setUtilisateur({Nom, courriel, adminStatut}); 
         }else{
-            setUtilisateur(null);
+            setUtilisateur(3);
         }
     }, [jeton]);
 

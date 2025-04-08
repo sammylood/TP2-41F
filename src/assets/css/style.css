@@ -58,7 +58,7 @@ a:hover, a:active {
 # Button
 --------------------------------------------------------------*/
 .btn {
-    padding: 16px 46px;
+    padding: 12px 46px;
     border: 5px dashed #9a24c1;
     border-radius: 50px;
     font-size: 18px;
@@ -88,14 +88,14 @@ a:hover, a:active {
 }
 
 .btn.dark {
-    padding: 18px 46px;
+    padding: 12px 46px;
     background: #231e23;
     border-color: transparent;
     color: #fff;
 }
 
 .btn.gradient-bg {
-    padding: 18px 46px;
+    padding: 12px 46px;
     border: 0;
     background: -moz-linear-gradient(180deg, rgba(171,0,229,1) 0%, rgba(88,20,121,1) 100%); /* ff3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(88,20,121,1)), color-stop(100%, rgba(171,0,229,1))); /* safari4+,chrome */

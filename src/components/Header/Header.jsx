@@ -5,7 +5,7 @@ import { AuthContext } from "../AuthContext/AuthContextProvider";
 
 
 function Header() {
-    const {jeton, connexion, deconnexion} = useContext(AuthContext) //importation du context avec les données voulues
+    const {jeton, utilisateur, connexion, deconnexion} = useContext(AuthContext) //importation du context avec les données voulues
     const formRef = useRef();
 
     async function envoiFormulaire(evenement){
@@ -67,7 +67,9 @@ function Header() {
                                 <li><NavLink to ={"/"}>About us</NavLink></li>
                                 <li><NavLink to ={"/liste-concerts"}>Concerts</NavLink></li>
                                 <li><NavLink to ={"/"}>Contact</NavLink></li>
+                                {/* {utilisateur.adminStatut == 0 && ( */}
                                 <li><NavLink to ={"/concert/ajout-concert"}>ajouter un concert</NavLink></li>
+                                {/* )} */}
                             </ul>
                         </nav>{/* .site-navigation */}
                     </div>{/* .col */}
