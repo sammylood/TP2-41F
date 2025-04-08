@@ -20,8 +20,8 @@ function AuthContextProvider(props) { //Provider de context
 
     useEffect(()=>{
         if(validerJeton(jeton)){
-            const {nom, courriel, role} = jwtDecode(jeton);
-            setUtilisateur({nom, courriel, role}); 
+            const {Nom, courriel, adminStatut} = jwtDecode(jeton);
+            setUtilisateur({Nom, courriel, adminStatut}); 
         }else{
             setUtilisateur(null);
         }
@@ -52,7 +52,7 @@ function AuthContextProvider(props) { //Provider de context
     }
   
     return (
-    <AuthContext.Provider value={{jeton, utilisateur, connexion, deconnexion}}> {/*export des composants à intégrer dans l'application (page web)*/}
+    <AuthContext.Provider value={{jeton, utilisateur, validerJeton, connexion, deconnexion}}> {/*export des composants à intégrer dans l'application (page web)*/}
       {children}
     </AuthContext.Provider>
   )

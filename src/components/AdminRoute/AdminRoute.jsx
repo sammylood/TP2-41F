@@ -1,0 +1,17 @@
+import React, {useContext} from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
+import { AuthContext } from '../AuthContext/AuthContextProvider';
+
+
+
+function AdminRoute() {
+  const { jeton, utilisateur, validerjeton } = useContext(AuthContext);
+  if(validerjeton(jeton) && utilisateur.adminStatut == 0){
+    return <Outlet></Outlet>
+  }else{
+    return <Navigate to="/" />;
+  }
+    
+}
+
+export default AdminRoute

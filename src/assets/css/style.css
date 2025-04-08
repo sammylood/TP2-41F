@@ -59,7 +59,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .btn {
     padding: 16px 46px;
-    border: 2px solid #9a24c1;
+    border: 5px dashed #9a24c1;
     border-radius: 50px;
     font-size: 18px;
     font-weight: bold;
@@ -82,11 +82,13 @@ a:hover, a:active {
 }
 
 .btn.dark-purple {
+    padding: 12px 46px;
     background: #9a24c1;
     color: #fff;
 }
 
 .btn.dark {
+    padding: 18px 46px;
     background: #231e23;
     border-color: transparent;
     color: #fff;
@@ -535,7 +537,7 @@ a:hover, a:active {
 .homepage-featured-events {
     height: auto;
     padding: 110px 0 150px;
-    background: url("images/featured-events-bg.jpg") no-repeat center;
+    background: url("../images/featured-events-bg.jpg") no-repeat center;
     background-size: cover !important;
 }
 
@@ -774,7 +776,7 @@ a:hover, a:active {
     font-weight: bold;
     line-height: 1;
     color: #232127;
-    background: url("images/next-events-header-bg.png") no-repeat center;
+    background: url("../images/next-events-header-bg.png") no-repeat center;
     text-align: center;
 }
 
@@ -874,7 +876,7 @@ a:hover, a:active {
 .homepage-regional-events {
     min-height: 1500px;
     padding-top: 280px;
-    background: url("images/regional-events-bg.jpg") no-repeat;
+    background: url("../images/regional-events-bg.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -1002,7 +1004,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .newsletter-subscribe {
     padding: 150px 0;
-    background: url("images/newsletter-bg.jpg") no-repeat;
+    background: url("../images/newsletter-bg.jpg") no-repeat;
     background-size: cover;
     text-align: center;
 }
@@ -1107,23 +1109,23 @@ a:hover, a:active {
 }
 
 .events-page-header {
-    background-image: url("images/events-page-header-bg.jpg");
+    background-image: url("../images/events-page-header-bg.jpg");
 }
 
 .single-event-page-header {
-    background-image: url("images/single-event-bg.jpg");
+    background-image: url("../images/single-event-bg.jpg");
 }
 
 .events-news-page-header {
-    background-image: url("images/events-news-bg.jpg");
+    background-image: url("../images/events-news-bg.jpg");
 }
 
 .contact-page-header {
-    background-image: url("images/contact-bg.jpg");
+    background-image: url("../images/contact-bg.jpg");
 }
 
 .elements-page-header {
-    background-image: url("images/elements-bg.jpg");
+    background-image: url("../images/elements-bg.jpg");
 }
 
 /*--------------------------------------------------------------
@@ -1159,32 +1161,34 @@ a:hover, a:active {
     outline: none;
 }
 
-.events-list-page .single-event {
-    display: none;
+/*.events-list-page*/ .single-event {
+    /* display: none; */
     margin-bottom: 30px;
 }
 
-.events-list-page .single-event.visible {
+/* .events-list-page .single-event.visible {
     display: block;
-}
+} */
 
-.events-list-page .events-thumbnail {
+/*.events-list-page*/ .events-thumbnail {
     margin: 0;
 }
 
-.events-list-page .events-thumbnail img {
+/*.events-list-page*/ .events-thumbnail img {
     display: block;
     width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
-.events-list-page .event-content-wrap  {
+/*.events-list-page*/ .event-content-wrap  {
     padding: 48px 36px 36px;
     border: 1px solid #e5e5e5;
     border-top: 0;
     background: #f3f8f9;
 }
 
-.events-list-page .event-content-wrap .entry-title {
+/*.events-list-page*/ .event-content-wrap .entry-title {
     font-size: 28px;
     font-weight: bold;
     color: #232127;
@@ -1195,26 +1199,26 @@ a:hover, a:active {
     color: #232127;
 }
 
-.events-list-page .event-content-wrap .event-location {
+/*.events-list-page*/ .event-content-wrap .event-location {
     padding-left: 32px;
     margin-top: 12px;
-    background: url("images/location-icon.png") no-repeat left top;
+    background: url("../images/location-icon.png") no-repeat left top;
 }
 
-.events-list-page .event-content-wrap .event-location a {
+/*.events-list-page*/ .event-content-wrap .event-location a {
     font-size: 14px;
     font-weight: bold;
     color: #232127;
     text-decoration: none;
 }
 
-.events-list-page .event-content-wrap .event-date {
+/*.events-list-page*/ .event-content-wrap .event-date {
     margin-top: 6px;
     font-size: 16px;
     color: #9a28d7;
 }
 
-.events-list-page .event-content-wrap .event-cost {
+/*.events-list-page*/ .event-content-wrap .event-cost {
     width: 124px;
     height: 52px;
     margin-right: -37px;
@@ -1223,25 +1227,25 @@ a:hover, a:active {
     background: #fff;
 }
 
-.events-list-page .event-content-wrap .event-cost span {
+/*.events-list-page*/ .event-content-wrap .event-cost span {
     margin-left: 4px;
     font-size: 24px;
     font-weight: bold;
     color: #9a28d7;
 }
 
-.events-list-page .event-content-wrap .entry-content p {
+/*.events-list-page*/ .event-content-wrap .entry-content p {
     margin-top: 22px;
     font-size: 18px;
     line-height: 1.7;
     color: #777777;
 }
 
-.events-list-page .event-content-wrap .entry-footer {
+/*.events-list-page*/ .event-content-wrap .entry-footer {
     margin-top: 36px;
 }
 
-.events-list-page .event-content-wrap .entry-footer a {
+/*.events-list-page*/ .event-content-wrap .entry-footer a {
     padding-bottom: 2px;
     font-size: 18px;
     font-weight: bold;
@@ -1251,12 +1255,12 @@ a:hover, a:active {
     border-bottom: 2px solid #9a28d7;
 }
 
-.events-list-page .load-more-btn {
+/*.events-list-page*/ .load-more-btn {
     text-align: center;
     margin: 84px 0;
 }
 
-.events-list-page .load-more-btn .btn:focus {
+/*.events-list-page*/ .load-more-btn .btn:focus {
     background: #9a28d7;
 }
 
@@ -1266,7 +1270,7 @@ a:hover, a:active {
 .upcoming-events-outer {
     padding: 400px 0 120px;
     margin-top: -200px;
-    background: url("images/upcoming-events-bg.jpg") no-repeat;
+    background: url("../images/upcoming-events-bg.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -1514,7 +1518,7 @@ ul.tabs-nav .tab-nav.active {
 .single-event-page .event-content-wrap .event-location {
     padding-left: 32px;
     margin-top: 12px;
-    background: url("images/location-icon.png") no-repeat left top;
+    background: url("../images/location-icon.png") no-repeat left top;
 }
 
 .single-event-page .event-content-wrap .event-location a {
@@ -1924,15 +1928,15 @@ ul.tabs-nav .tab-nav.active {
 
 
 .contact-location-details .entry-footer li.contact-address {
-    background: url("images/location-icon.png") no-repeat left center;
+    background: url("../images/location-icon.png") no-repeat left center;
 }
 
 .contact-location-details .entry-footer li.contact-number {
-    background: url("images/phone-icon.png") no-repeat left center;
+    background: url("../images/phone-icon.png") no-repeat left center;
 }
 
 .contact-location-details .entry-footer li.contact-email {
-    background: url("images/folder-icon.png") no-repeat left center;
+    background: url("../images/folder-icon.png") no-repeat left center;
 }
 
 .contact-page-map {

@@ -46,7 +46,7 @@ function Header() {
                     <div class="col-10 col-lg-2 order-lg-1">
                         <div class="site-branding">
                             <div class="site-title">
-                            <a to="/"> <img src="src/assets/images/logo.png" alt="logo" /> </a>
+                            <NavLink to="/"> <img src="src/assets/images/logo.png" alt="logo" /> </NavLink>
                             </div>{/* .site-title */}
                         </div>{/* .site-branding */}
                     </div>{/* .col */}
@@ -66,8 +66,8 @@ function Header() {
                                 <li><NavLink to ={"/"}>Home</NavLink></li>
                                 <li><NavLink to ={"/"}>About us</NavLink></li>
                                 <li><NavLink to ={"/liste-concerts"}>Concerts</NavLink></li>
-                                <li><NavLink to ={"/"}>News</NavLink></li>
                                 <li><NavLink to ={"/"}>Contact</NavLink></li>
+                                <li><NavLink to ={"/concert/ajout-concert"}>ajouter un concert</NavLink></li>
                             </ul>
                         </nav>{/* .site-navigation */}
                     </div>{/* .col */}
@@ -80,10 +80,10 @@ function Header() {
                             <input className="input-entry" type="email" name="courriel" id="courriel" placeholder="courriel" />
                             <label htmlFor="mdp">Mot de passe</label>
                             <input className="input-entry" type="password" name="mdp" id="mdp" />
-                            <input className="btn gradient-bg" type="submit" value="Connexion" />
+                            <input className="btn dark-purple" type="submit" value="Connexion" />
                         </form>
                     )}
-                    {jeton && <div className="btn gradient-bg" onClick={deconnexion}>Deconnexion</div>}    
+                    {jeton && <div className="btn dark" onClick={deconnexion}>Deconnexion</div>}    
 
                         
                         {/* <div class="buy-tickets">

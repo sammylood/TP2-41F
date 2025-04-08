@@ -8,13 +8,13 @@ function InfoSection() {
                     <div class="row">
                         <div class="col-12 col-md-4 col-lg-5">
                             <figure>
-                                <img src="src/assets/images/logo.png" alt="logo" />
+                                <img src="src/assets/images/next3.jpg" alt="logo" />
                             </figure>
                         </div>
 
                         <div class="col-12 col-md-8 col-lg-7">
                             <header class="entry-header">
-                                <h2 class="entry-title">What is Agenda and why choose our services?</h2>
+                                <h2 class="entry-title">What is Concertus and why choose our services?</h2>
                             </header>
 
                             <div class="entry-content">
@@ -22,8 +22,8 @@ function InfoSection() {
                             </div>
 
                             <footer class="entry-footer">
-                                <a href="#" class="btn gradient-bg">Read More</a>
-                                <a href="#" class="btn dark">Register Now</a>
+                                <a href="#" class="btn">Read More</a>
+                                <a href="#" class="btn dark-purple">Register Now</a>
                             </footer>
                         </div>
                     </div>

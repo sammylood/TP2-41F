@@ -7,6 +7,7 @@ import Concerts from '../Concerts/Concerts.jsx';
 import FormAjoutConcert from "../FormAjoutConcert/FormAjoutConcert";
 import DetailConcert from '../Concert/Concert.jsx';
 import AuthContextProvider from '../AuthContext/AuthContextProvider'
+import AdminRoute from '../AdminRoute/AdminRoute';
 function App() {
   return (
     <div>
@@ -16,7 +17,9 @@ function App() {
             <Route path="/" element={<Homepage />} /> 
             <Route path="/liste-concerts" element={<Concerts />} /> 
             <Route path="/concert/:id" element={<DetailConcert />} />
-            <Route path="/concert/ajout-concert" element={<FormAjoutConcert />} /> 
+            <Route element={<AdminRoute/>}>
+              <Route path="/concert/ajout-concert" element={<FormAjoutConcert />} /> 
+            </Route>
           </Routes>
           <Footer />
       </AuthContextProvider>
