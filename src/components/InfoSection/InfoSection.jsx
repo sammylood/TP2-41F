@@ -14,7 +14,7 @@ function InfoSection() {
 
                         <div class="col-12 col-md-8 col-lg-7">
                             <header class="entry-header">
-                                <h2 class="entry-title">What is Concertus and why choose our services?</h2>
+                                <h2 class="entry-title">Avec Concertus, trouvez votre concert de rêve?</h2>
                             </header>
 
                             <div class="entry-content">

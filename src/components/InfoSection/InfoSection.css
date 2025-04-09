@@ -1,3 +1,6 @@
 .homepage-info-section{
     min-height: 500px;
 }
+.btn {
+    border: 5px dashed blueviolet;
+}

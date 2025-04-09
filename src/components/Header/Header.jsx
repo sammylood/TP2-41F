@@ -22,7 +22,7 @@ function Header() {
             },
             method: "POST",
         };
-    let URL = "http://localhost:3000/utilisateurs/connexion";
+    let URL = "https://tp1-41f.onrender.com/utilisateurs/connexion";
         const reponse = await fetch(URL, options);
         const donnees = await reponse.json();
         if(reponse.ok){
@@ -46,7 +46,7 @@ function Header() {
                     <div class="col-10 col-lg-2 order-lg-1">
                         <div class="site-branding">
                             <div class="site-title">
-                            <NavLink to="/"> <img src="src/assets/images/logo.png" alt="logo" /> </NavLink>
+                            <NavLink to="/"> <img src="../src/assets/images/logo.png" alt="logo" /> </NavLink>
                             </div>{/* .site-title */}
                         </div>{/* .site-branding */}
                     </div>{/* .col */}
@@ -67,9 +67,9 @@ function Header() {
                                 <li><NavLink to ={"/"}>About us</NavLink></li>
                                 <li><NavLink to ={"/liste-concerts"}>Concerts</NavLink></li>
                                 <li><NavLink to ={"/"}>Contact</NavLink></li>
-                                {/* {utilisateur.adminStatut == 0 && ( */}
+                                {jeton && (
                                 <li><NavLink to ={"/concert/ajout-concert"}>ajouter un concert</NavLink></li>
-                                {/* )} */}
+                                )}
                             </ul>
                         </nav>{/* .site-navigation */}
                     </div>{/* .col */}

@@ -6,7 +6,6 @@ function CarteConcert(props) {
     const { concert } = props;
     const navigate = useNavigate();
 
-    //  TO DO :  Corriger le bug : Concert.id n'apparait pas
 
     function onClicCarte(event){
         navigate(`/concert/${concert.id}`);

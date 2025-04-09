@@ -1,0 +1,17 @@
+.single-concert .events-thumbnail img {
+    aspect-ratio: 4 / 2;
+    object-fit: cover;  
+}
+
+.single-concert .single-event {
+    margin-top: 30px;
+}
+
+.single-concert.container {
+    max-width: 1000px;
+}
+
+.btn {
+    border: none;
+    margin: 10px 0;
+}

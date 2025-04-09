@@ -10,7 +10,7 @@ function Footer() {
             <div class="col-12">
                 <figure class="footer-logo">
                     <a to="/">
-                    <img src="src/assets/images/logo.png" alt="logo" />
+                    <img src="../src/assets/images/logo.png" alt="logo" />
                     </a>
                 </figure>
 

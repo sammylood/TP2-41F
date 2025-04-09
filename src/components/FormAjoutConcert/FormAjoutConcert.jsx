@@ -71,7 +71,7 @@ function FormAjoutConcert() {
             };
 
             //On envoie
-            const reponse = await fetch("https://tp1-41f.onrender.com/concerts", objDonnees);
+            const reponse = await fetch("http://localhost:3000/liste-concerts", objDonnees);
             const listeConcerts = await reponse.json();
        
             // const reponse = await fetch(`${URL}/Concerts`, objDonnees);
@@ -79,7 +79,7 @@ function FormAjoutConcert() {
 
             //On gère la réponse
             if (reponse.ok) {
-                navigate("/Concerts");
+                navigate("/liste-Concerts");
            } 
             // else {
             //     setMessage("Veuillez corriger le formulaire");
